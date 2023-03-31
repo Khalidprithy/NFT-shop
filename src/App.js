@@ -1,3 +1,4 @@
+import Footer from "./Global/Footer";
 import Header from "./Global/Header";
 import Router from "./Router/Router";
 
@@ -5,7 +6,10 @@ function App() {
   return (
     <div>
       <Header />
-      <Router />
+      <main>
+        <Router />
+      </main>
+      <Footer />
     </div>
   );
 }
