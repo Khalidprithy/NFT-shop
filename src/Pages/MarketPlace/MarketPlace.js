@@ -3,7 +3,7 @@ import React from 'react';
 const MarketPlace = () => {
     return (
         <div>
-            <h2>This is marketplace page</h2>
+            <h2 className='text-center'>This is marketplace page</h2>
         </div>
     );
 };

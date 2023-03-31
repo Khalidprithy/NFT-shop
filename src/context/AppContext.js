@@ -1,23 +1,23 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { useQuery } from 'react-query';
-
 
 const MyContext = createContext();
 
 function MyContextProvider(props) {
 
 
-    const [products, setProducts] = useState([]);
 
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, []);
+    const { data, isLoading, error } = useQuery('myData', () =>
+        fetch('api').then((res) =>
+            res.json()
+        )
+    );
 
-    console.log(products)
+    console.log(data)
+
+
     const contextValue = {
-        products,
+        data,
     };
 
     return (
