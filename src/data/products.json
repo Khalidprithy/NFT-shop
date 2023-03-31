@@ -1,0 +1,51 @@
+[
+    {
+      "profile_image": "https://example.com/profile-image1.jpg",
+      "sales_percentage": 0.25,
+      "title": "Digital Artist",
+      "nft_points": 1000,
+      "sell_direction": "up"
+    },
+    {
+      "profile_image": "https://example.com/profile-image2.jpg",
+      "sales_percentage": 0.15,
+      "title": "Photographer",
+      "nft_points": 750,
+      "sell_direction": "down"
+    },
+    {
+      "profile_image": "https://example.com/profile-image2.jpg",
+      "sales_percentage": 0.15,
+      "title": "Photographer",
+      "nft_points": 750,
+      "sell_direction": "down"
+    },
+    {
+      "profile_image": "https://example.com/profile-image2.jpg",
+      "sales_percentage": 0.15,
+      "title": "Photographer",
+      "nft_points": 750,
+      "sell_direction": "down"
+    },
+    {
+      "profile_image": "https://example.com/profile-image2.jpg",
+      "sales_percentage": 0.15,
+      "title": "Photographer",
+      "nft_points": 750,
+      "sell_direction": "down"
+    },
+    {
+      "profile_image": "https://example.com/profile-image2.jpg",
+      "sales_percentage": 0.15,
+      "title": "Photographer",
+      "nft_points": 750,
+      "sell_direction": "down"
+    },
+    {
+      "profile_image": "https://example.com/profile-image2.jpg",
+      "sales_percentage": 0.15,
+      "title": "Photographer",
+      "nft_points": 750,
+      "sell_direction": "down"
+    }
+]

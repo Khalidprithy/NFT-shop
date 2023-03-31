@@ -1,13 +1,13 @@
 import React from 'react';
 import image02 from '../../assets/avatar01.png'
 
-const TopCollectionCard = () => {
+const TopCollectionCard = ({ item, index }) => {
     return (
         <div className='flex items-center gap-6 p-3'>
-            <h4 className='text-2xl font-bold'>1</h4>
+            <h4 className='text-2xl font-bold'>{index + 1}</h4>
             <img src={image02} alt="" />
             <div className='flex flex-col gap-2'>
-                <h5 className='font-semibold'>CryptoFunks</h5>
+                <h5 className='font-semibold'>{item?.title}</h5>
                 <span className='flex items-center text-sm gap-2'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 9 14" fill="none">
                         <g clip-path="url(#clip0_328_333)">
@@ -19,10 +19,10 @@ const TopCollectionCard = () => {
                             </clipPath>
                         </defs>
                     </svg>
-                    19,769.39
+                    {item.nft_points}
                 </span>
             </div>
-            <h4 className='text-xl font-semibold text-green-500'>+26.52%</h4>
+            <h4 className={`text-xl font-semibold ${item.sell_direction === 'up' ? 'text-green-500' : 'text-red-500'}`}>+{item.sales_percentage}%</h4>
         </div>
     );
 };
