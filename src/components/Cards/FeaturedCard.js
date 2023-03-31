@@ -7,10 +7,10 @@ import avatar from '../../assets/Ellipse 95.png'
 
 const FeaturedCard = () => {
     return (
-        <div>
+        <div className='mx-auto'>
             <div className='flex'>
-                <img className='w-72' src={card01} alt="" />
-                <div className='flex flex-col justify-between gap-2'>
+                <img className='w-8/12' src={card01} alt="" />
+                <div className='w-4/12 flex flex-col justify-between gap-2'>
                     <img className='w-36 px-2' src={card07} alt="" />
                     <img className='w-36 px-2' src={card06} alt="" />
                     <img className='w-36 px-2' src={card09} alt="" />

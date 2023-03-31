@@ -4,8 +4,8 @@ import profile from '../../assets/Ellipse 95.png'
 
 const MainCard = () => {
     return (
-        <div className='p-4'>
-            <img className='w-full' src={image} alt="" />
+        <div className='p-4 mx-auto'>
+            <img className='max-w-xl md:w-full' src={image} alt="" />
             <div>
                 <div className='flex items-center justify-between py-6'>
                     <div className='flex items-center gap-1'>

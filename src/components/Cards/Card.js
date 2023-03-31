@@ -7,7 +7,7 @@ import Timer from '../Timer';
 
 const Card = () => {
     return (
-        <div className='p-3 rounded-2xl shadow bg-white'>
+        <div className='p-3 rounded-2xl shadow bg-white mx-auto hover:shadow-lg transition-all ease-in-out duration-300'>
             <div className='relative z-10'>
                 <img className='w-[300px] h-[300px]' src={card01} alt="" />
                 <div className='absolute -bottom-5 left-2'>
@@ -27,7 +27,7 @@ const Card = () => {
                 <div className='bg-gray-200 px-2 py-1 rounded-full'>
                     <Timer hours={1} minutes={30} seconds={0} color={'black'} />
                 </div>
-                <h4 className='text-lg text-violet-600 font-medium'>Place a bid</h4>
+                <h4 className='text-lg text-primary font-medium'>Place a bid</h4>
             </div>
         </div>
     );

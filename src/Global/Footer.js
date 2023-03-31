@@ -5,7 +5,7 @@ import TwitterIcon from '../components/Icons/TwitterIcon';
 
 const Footer = () => {
     return (
-        <footer className='max-w-screen-xl mx-auto'>
+        <footer className='max-w-screen-xl mx-auto px-4'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5 py-10'>
                 <div>
                     <h4 className='text-2xl uppercase font-bold'>NFTERS</h4>
@@ -69,7 +69,7 @@ const Footer = () => {
                         <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                         <div class="relative">
                             <input type="search" id="search" class="block w-full p-4 pl-6 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your email address.." required />
-                            <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Subscibe Now</button>
+                            <button type="submit" class="text-white absolute right-[5px] bottom-[5px] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Subscribe Now</button>
                         </div>
                     </form>
                 </div>
