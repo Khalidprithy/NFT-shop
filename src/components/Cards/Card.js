@@ -1,8 +1,9 @@
 import React from 'react';
 import card01 from '../../assets/Card01.png'
-import AvatarGroup from './AvatarGroup';
-import NftIcon from './NftIcon';
-import Timer from './Timer';
+import AvatarGroup from '../AvatarGroup';
+import NFTIcon from '../NFTIcon';
+import Timer from '../Timer';
+
 
 const Card = () => {
     return (
@@ -16,7 +17,7 @@ const Card = () => {
             <h4 className='text-xl font-semibold p-1 mt-5'>This NFT</h4>
             <div className='flex justify-between border-b border-gray-300 pb-4'>
                 <div className='flex items-center gap-2'>
-                    <NftIcon color={'28B463'} />
+                    <NFTIcon color={'28B463'} />
                     <span className='text-green-500'> 0.25 ETH</span>
                 </div>
                 <h3 className='text-gray-500'>1 of 321</h3>
