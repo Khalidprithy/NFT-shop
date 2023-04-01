@@ -79,8 +79,8 @@ const DiscoverNft = () => {
                                 Crypto
                             </TabButton>
                         </div>
-                        <button className='flex gap-1 btn bg-gray-200 text-black border-none rounded-full hover:bg-primary hover:text-white'>
-                            <FilterIcon color={'371C87'} />
+                        <button className='flex gap-1 btn bg-gray-200 text-black border-none rounded-full hover:bg-primary hover:text-white normal-case transition-all ease-in-out duration-300'>
+                            <FilterIcon color={'D7DBDD'} />
                             All Filters</button>
                     </div>
                     <div className="mt-8">

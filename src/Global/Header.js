@@ -34,7 +34,7 @@ const Header = () => {
                 </div>
                 <div className="navbar-end gap-2">
                     <div className="form-control hidden lg:flex">
-                        <form class="flex items-center">
+                        <form className="flex items-center">
                             <MainSearchBar />
                         </form>
                     </div>
@@ -42,7 +42,7 @@ const Header = () => {
                     <button className="btn btn-sm md:btn-md btn-outline btn-primary hover:text-white rounded-full"><span className='hidden md:block'>Connect</span> Wallet</button>
                 </div>
             </div>
-            <form class="flex lg:hidden items-center max-w-screen-md mx-auto px-8">
+            <form className="flex lg:hidden items-center max-w-screen-md mx-auto px-8">
                 <MainSearchBar />
             </form>
         </header>

@@ -36,6 +36,8 @@ function Timer({ hours, minutes, seconds, color, size }) {
         return () => clearInterval(intervalId);
     }, []);
 
+
+
     return (
         <div className={`text-${color} text-${size}`}>
             <span className="ml-1">{remainingTime.hours.toString().padStart(2, "0")}</span>h

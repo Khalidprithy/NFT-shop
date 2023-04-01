@@ -10,7 +10,9 @@ const Introduction = () => {
 
                         <lord-icon
                             src="https://cdn.lordicon.com/ozqvdvoh.json"
-                            trigger="hover"
+                            trigger="loop"
+                            delay="2000"
+                            colors="outline:#121331,primary :#30e849,secondary :#ee6d66"
                             style={{ width: '50px', height: '50px' }}>
                         </lord-icon>
                         <h6 className='font-semibold'>Fast Transaction</h6>
@@ -21,7 +23,9 @@ const Introduction = () => {
                     <div className='flex items-center gap-2'>
                         <lord-icon
                             src="https://cdn.lordicon.com/hbwqfgcf.json"
-                            trigger="hover"
+                            trigger="loop"
+                            delay="2000"
+                            colors="outline:#545454,primary:#7166ee,secondary:#e86830,tertiary:#66ee78"
                             style={{ width: '50px', height: '50px' }}>
                         </lord-icon>
                         <h6 className='font-semibold'>Growth Transaction</h6>

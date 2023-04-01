@@ -19,7 +19,7 @@ const MainCard = () => {
                         <h6 className='text-sm font-semibold'>Highest Bid</h6>
                         <p className='text-lg font-semibold flex items-center gap-1'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
-                                <g clip-path="url(#clip0_328_333)">
+                                <g clipPath="url(#clip0_328_333)">
                                     <path d="M8.3154 7.13126L4.26572 9.66876L0.213379 7.13126L4.26572 0L8.3154 7.13126ZM4.26572 10.4836L0.213379 7.9461L4.26572 14L8.31806 7.9461L4.26572 10.4836Z" fill="#000000" />
                                 </g>
                                 <defs>

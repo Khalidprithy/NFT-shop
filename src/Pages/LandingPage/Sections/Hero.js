@@ -12,38 +12,40 @@ import StatesAnimation from '../../../components/StatesAnimation';
 
 const Hero = () => {
     return (
-        <section class="bg-white dark:bg-gray-900">
-            <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-                <div class="flex flex-col mr-auto place-self-center lg:col-span-7 relative">
-                    <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white uppercase">Discover, and collect Digital Art  NFTs </h1>
-                    <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, Sell, and discover exclusive digital assets.</p>
+        <section className="bg-white dark:bg-gray-900">
+            <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                <div className="flex flex-col mr-auto place-self-center lg:col-span-7 relative">
+                    <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white uppercase">Discover, and collect Digital Art  NFTs </h1>
+                    <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, Sell, and discover exclusive digital assets.</p>
                     <button className="btn btn-primary rounded-full px-6 w-44 z-30">Explore Now</button>
 
-                    <div className="flex gap-5 p-2 z-30">
+                    <div className="w-80 grid grid-cols-3 justify-items-end pt-2 z-30">
                         <div className="mx-2">
                             <div className="stat-value">
                                 <StatesAnimation end={98} />K+
                             </div>
-                            <div className="text-base">Artwork</div>
                         </div>
 
                         <div className="mx-2">
                             <div className="stat-value">
                                 <StatesAnimation end={12} />K+
                             </div>
-                            <div className="text-base">Auction</div>
                         </div>
 
                         <div className="mx-2">
                             <div className="stat-value">
                                 <StatesAnimation end={15} />K+
                             </div>
-                            <div className="text-base">Artist</div>
                         </div>
+                    </div>
+                    <div className="w-80 grid grid-cols-3 justify-items-start z-30 ml-2">
+                        <div className="text-base">Artwork</div>
+                        <div className="text-base">Auction</div>
+                        <div className="text-base">Artist</div>
                     </div>
                     <img className='absolute -bottom-7 -left-4 z-10' src={dot} alt="" />
                 </div>
-                <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                     <div className='relative w-[400px]'>
                         <img className='w-[350px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30' src={img1} alt="" />
                         <img className='w-[290px] absolute top-1/2 left-[210px] transform -translate-x-1/3 -translate-y-1/2 z-20 animate-pulse' src={img2} alt="" />

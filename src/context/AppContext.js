@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext } from 'react';
 import { useQuery } from 'react-query';
 
 const MyContext = createContext();
@@ -13,11 +13,10 @@ function MyContextProvider(props) {
         )
     );
 
-    console.log(data)
-
-
     const contextValue = {
         data,
+        isLoading,
+        error
     };
 
     return (
