@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import img1 from '../../../assets/card11.png'
 import img2 from '../../../assets/card05.png'
 import img3 from '../../../assets/card12.png'
 import circle from '../../../assets/Group 83.png'
 import avatar from '../../../assets/Ellipse 95.png'
 import dot from '../../../assets/Dot.png'
-import Timer from '../../../components/Timer';
+// import Timer from '../../../components/Timer';
+import TimerUpdated from '../../../components/TimerUpdated';
 import NFTIcon from '../../../components/NFTIcon';
 import StatesAnimation from '../../../components/StatesAnimation';
+import { MyContext } from '../../../context/AppContext';
 
 
 const Hero = () => {
+
+    const { data } = useContext(MyContext);
+
+    const topNft = data?.slice(0, 1);
+
+    console.log(topNft)
+
     return (
         <section className="bg-white dark:bg-gray-900">
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -43,7 +52,7 @@ const Hero = () => {
                         <div className="text-base">Auction</div>
                         <div className="text-base">Artist</div>
                     </div>
-                    <img className='absolute -bottom-7 -left-4 z-10' src={dot} alt="" />
+                    <img className='absolute -bottom-4 -left-4 z-10' src={dot} alt="" />
                 </div>
                 <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                     <div className='relative w-[400px]'>
@@ -53,28 +62,32 @@ const Hero = () => {
                         <div className='absolute top-[200px] left-[0px] transform -translate-x-1/4 -translate-y-1/2 z-40'>
                             <img className='w-[100px] h-[100px] animate-spin-slow' src={circle} alt="" />
                         </div>
-
-                        <div className='w-[300px] absolute top-[50px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 rounded-lg p-2'>
-                            <h4 className='text-2xl font-semibold text-white mb-2'>Abstr Gradient NFT</h4>
-                            <div className='flex items-center gap-2'>
-                                <img className='w-7' src={avatar} alt="" />
-                                <h4 className='text-white'>Arkhan17</h4>
-                            </div>
-                        </div>
-
-                        <div className='w-[300px] absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 rounded-lg p-2 px-4 bg-gray-100 flex justify-between backdrop-blur-md bg-white/20 text-white'>
-                            <div>
-                                <h4 className='text-sm mb-1'>Current Bid</h4>
-                                <div className='flex items-center gap-2'>
-                                    <NFTIcon color={'ffffff'} />
-                                    <span>0.25 ETH</span>
+                        {
+                            topNft?.map(nft => <>
+                                <div key={nft?._id} className='w-[300px] absolute top-[50px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 rounded-lg p-2'>
+                                    <h4 className='text-2xl font-semibold text-white mb-2'>{nft?.title}</h4>
+                                    <div className='flex items-center gap-2'>
+                                        <img className='w-7' src={avatar} alt="" />
+                                        <h4 className='text-white'>{nft?.userInfo.name}</h4>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <h4 className='text-sm mb-1'>Ends in</h4>
-                                <Timer hours={1} minutes={30} seconds={0} color={'white'} />
-                            </div>
-                        </div>
+                                <div className='w-[300px] absolute -bottom-[25px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 rounded-lg p-2 px-4 bg-gray-100 flex justify-between backdrop-blur-md bg-white/20 text-white'>
+                                    <div>
+                                        <h4 className='text-sm mb-1'>Current Bid</h4>
+                                        <div className='flex items-center gap-2'>
+                                            <NFTIcon color={'ffffff'} />
+                                            <span>{nft?.nftPoints} ETH</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className='text-sm mb-1'>Ends in</h4>
+                                        <TimerUpdated endDate={nft?.timer} />
+                                        {/* <Timer hours={1} minutes={30} seconds={0} color={'white'} /> */}
+                                    </div>
+                                </div>
+                            </>
+                            )
+                        }
                     </div>
                 </div>
             </div>

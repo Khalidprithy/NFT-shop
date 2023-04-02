@@ -6,12 +6,14 @@ const MyContext = createContext();
 function MyContextProvider(props) {
 
 
-
     const { data, isLoading, error } = useQuery('myData', () =>
-        fetch('api').then((res) =>
+        fetch('https://todo-server-ze08.onrender.com/crypto').then((res) =>
             res.json()
         )
     );
+
+    const filteredItems = data?.filter((item) => item.category === "art");
+    console.log(filteredItems)
 
     const contextValue = {
         data,

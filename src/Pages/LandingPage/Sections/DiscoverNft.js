@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Card from '../../../components/Cards/Card';
 import FilterIcon from '../../../components/Icons/FilterIcon';
+import { MyContext } from '../../../context/AppContext';
 
 const DiscoverNft = () => {
+
+    const { data } = useContext(MyContext);
+
     const [activeTab, setActiveTab] = useState(1);
 
     const handleTabClick = (tabIndex) => {
@@ -87,18 +91,12 @@ const DiscoverNft = () => {
                         {activeTab === 1 && (
                             <div>
                                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
-                                    <Card />
+                                    {
+                                        data?.map(nft => <Card
+                                            key={nft?._id}
+                                            nft={nft}
+                                        />)
+                                    }
                                 </div>
                                 <div className='flex justify-center'>
                                     <button className='btn btn-outline btn-primary rounded-full mt-5 px-5 normal-case'>More NFTs</button>
@@ -107,32 +105,92 @@ const DiscoverNft = () => {
                         )}
                         {activeTab === 2 && (
                             <div>
-                                Art
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                                    {
+                                        data?.slice(0, 4).map(nft => <Card
+                                            key={nft?._id}
+                                            nft={nft}
+                                        />)
+                                    }
+                                </div>
+                                <div className='flex justify-center'>
+                                    <button className='btn btn-outline btn-primary rounded-full mt-5 px-5 normal-case'>More NFTs</button>
+                                </div>
                             </div>
                         )}
                         {activeTab === 3 && (
                             <div>
-                                Celebrities
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                                    {
+                                        data?.slice(0, 5).map(nft => <Card
+                                            key={nft?._id}
+                                            nft={nft}
+                                        />)
+                                    }
+                                </div>
+                                <div className='flex justify-center'>
+                                    <button className='btn btn-outline btn-primary rounded-full mt-5 px-5 normal-case'>More NFTs</button>
+                                </div>
                             </div>
                         )}
                         {activeTab === 4 && (
                             <div>
-                                Gaming
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                                    {
+                                        data?.map(nft => <Card
+                                            key={nft?._id}
+                                            nft={nft}
+                                        />)
+                                    }
+                                </div>
+                                <div className='flex justify-center'>
+                                    <button className='btn btn-outline btn-primary rounded-full mt-5 px-5 normal-case'>More NFTs</button>
+                                </div>
                             </div>
                         )}
                         {activeTab === 5 && (
                             <div>
-                                Sport
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                                    {
+                                        data?.map(nft => <Card
+                                            key={nft?._id}
+                                            nft={nft}
+                                        />)
+                                    }
+                                </div>
+                                <div className='flex justify-center'>
+                                    <button className='btn btn-outline btn-primary rounded-full mt-5 px-5 normal-case'>More NFTs</button>
+                                </div>
                             </div>
                         )}
                         {activeTab === 6 && (
                             <div>
-                                Music
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                                    {
+                                        data?.map(nft => <Card
+                                            key={nft?._id}
+                                            nft={nft}
+                                        />)
+                                    }
+                                </div>
+                                <div className='flex justify-center'>
+                                    <button className='btn btn-outline btn-primary rounded-full mt-5 px-5 normal-case'>More NFTs</button>
+                                </div>
                             </div>
                         )}
                         {activeTab === 7 && (
                             <div>
-                                Crypto
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                                    {
+                                        data?.map(nft => <Card
+                                            key={nft?._id}
+                                            nft={nft}
+                                        />)
+                                    }
+                                </div>
+                                <div className='flex justify-center'>
+                                    <button className='btn btn-outline btn-primary rounded-full mt-5 px-5 normal-case'>More NFTs</button>
+                                </div>
                             </div>
                         )}
                     </div>
